@@ -13,22 +13,22 @@ let productos = [
  let respuesta = prompt("Queres ver los productos? \nResponder SI o NO")
  if (respuesta == "si") {
     alert("Remera \nShort \nJeans \nGorra") 
- }else if (respuesta && sacar === "no") {
+ }else if (respuesta == "no") {
     alert("Muchas gracias por su compra")
  }
+
  
  let eliminados = [{nombre: "remera", nombre: "short", nombre:"jeans", nombre: "gorra"} ]
- 
  let eliminar = prompt ("¿Quiere eliminar un producto de su carrito?")
  if (eliminar == "si") {
  let productoIngresado = prompt("Ingrese un producto que quiere eliminar")
- let productoEliminado = eliminados.indexOf(productoIngresado)
- }else if(productoEliminado != -1) {
-     eliminados.splice(productoEliminado, 1)
+  articulo = eliminados.indexOf(productoIngresado)
+ }else if(articulo != -1) {
+     eliminados.splice(articulo, 1)
  }
- alert("Su lista se modifico ")
- 
- for (let i = 0; i < eliminados.length; i++) {
-    total = total + productoEliminado[i].precio
+ alert("Su lista se modifico" , eliminados)
+ let = nuevoTotal = 0
+ for (let i = 0; i < productos.length; i++) {
+    nuevoTotal = nuevoTotal + articulo[i].precio
   }
-  alert("Su nuevo total es " + total)
+  alert("Su nuevo total es " + nuevoTotal)
